@@ -144,6 +144,7 @@ export interface RadarRow {
   implied_value_usd: number;
   category_multiple: number;
   category_peers: number;
+  category_median: number | null;
   growth_multiplier: number;
   maturity_multiplier: number;
   farm_steps: string[];
@@ -478,6 +479,7 @@ export function radarRow(row: BoardRow): RadarRow {
     implied_value_usd: row.implied_value_usd,
     category_multiple: row.model.category_multiple,
     category_peers: row.model.category_peers,
+    category_median: row.model.category_median,
     growth_multiplier: row.model.growth_multiplier,
     maturity_multiplier: row.model.maturity_multiplier,
     farm_steps: row.farm_steps,
